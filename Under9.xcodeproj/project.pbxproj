@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A56BE3F21B301D400DA99BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56BE3E21B301D400DA99BE /* HomeViewController.swift */; };
 		4AB13EAB21B2DD000037E37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB13EAA21B2DD000037E37C /* AppDelegate.swift */; };
 		4AB13EAD21B2DD000037E37C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB13EAC21B2DD000037E37C /* ViewController.swift */; };
 		4AB13EB021B2DD000037E37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB13EAE21B2DD000037E37C /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A56BE3E21B301D400DA99BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4AB13EA721B2DD000037E37C /* Under9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Under9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB13EAA21B2DD000037E37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AB13EAC21B2DD000037E37C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				4AB13EAA21B2DD000037E37C /* AppDelegate.swift */,
 				4AB13EAC21B2DD000037E37C /* ViewController.swift */,
+				4A56BE3E21B301D400DA99BE /* HomeViewController.swift */,
 				4AB13EAE21B2DD000037E37C /* Main.storyboard */,
 				4AB13EB121B2DD010037E37C /* Assets.xcassets */,
 				4AB13EB321B2DD010037E37C /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				4AB13EAD21B2DD000037E37C /* ViewController.swift in Sources */,
 				4AB13EAB21B2DD000037E37C /* AppDelegate.swift in Sources */,
+				4A56BE3F21B301D400DA99BE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
