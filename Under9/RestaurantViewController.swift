@@ -7,14 +7,12 @@
 //
 
 import UIKit
-import CSVImporter
 
 class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var backButton: UINavigationItem!
     @IBOutlet weak var budgetLabel: UILabel!
     var restaurantName: String?
-    var inventories: [Inventory]?
     
     override func viewDidLoad() {
         budgetLabel.layer.masksToBounds = true
@@ -36,20 +34,27 @@ class RestaurantViewController: UIViewController {
         
     }
     
-//    func processData() {
-//        let path = "Under9/durfeesinventory.csv"
-//        let importer = CSVImporter<Inventory>(path: path)
-//        importer.startImportingRecords { recordValues -> Inventory in
-//            print(recordValues[0])
-//            return Inventory(product: recordValues[0], price: recordValues[1], type: recordValues[2])
-//
-//            }.onFinish { importedRecords in
-//
-//                for record in importedRecords {
-//                    print(record)
-//                }
-//
-//        }
+    func checkData() {
+        let inventory = ["Naked Pressed": "5:50",
+                         "Tropicana 12 oz": "2.25",
+                         "Kevita":"4.75",
+                         "Gatorade Shake": "4.75",
+                         "Metro Deli Chips": "1.75",
+                         "Cheetos": "1.10",
+                         "Lays Classic Chips": "1.60",
+                         "Chicken Tenders": "5.95",
+                         "Chapstick": "2.50",
+                         "Nature Valley": "1.50",
+                         "Apple": "0.60",
+                         "Banana": "0.70",
+                         "Oatmeal": "3.50",
+                         "Campbells": "4.00"]
+        for (key, value) in inventory {
+            if Float(value) < Float(budgetLabel.text) {
+                
+            }
+        }
+        
     }
     
     
@@ -86,4 +91,4 @@ class RestaurantViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+}
