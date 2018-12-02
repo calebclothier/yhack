@@ -10,7 +10,6 @@
 		4A56BE3F21B301D400DA99BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56BE3E21B301D400DA99BE /* HomeViewController.swift */; };
 		4A56BE4121B3245B00DA99BE /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56BE4021B3245B00DA99BE /* RestaurantViewController.swift */; };
 		4A81791321B3DD71003C05CC /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81791221B3DD71003C05CC /* CartViewController.swift */; };
-		4A9A22AB21B38E1B00288686 /* durfeesinventory.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4A9A22AA21B38E1B00288686 /* durfeesinventory.csv */; };
 		4AB13EAB21B2DD000037E37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB13EAA21B2DD000037E37C /* AppDelegate.swift */; };
 		4AB13EAD21B2DD000037E37C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB13EAC21B2DD000037E37C /* ViewController.swift */; };
 		4AB13EB021B2DD000037E37C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB13EAE21B2DD000037E37C /* Main.storyboard */; };
@@ -18,7 +17,6 @@
 		4AB13EB521B2DD010037E37C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB13EB321B2DD010037E37C /* LaunchScreen.storyboard */; };
 		4AB13EC021B2DD010037E37C /* Under9Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB13EBF21B2DD010037E37C /* Under9Tests.swift */; };
 		4AB13ECB21B2DD010037E37C /* Under9UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB13ECA21B2DD010037E37C /* Under9UITests.swift */; };
-		4ABB2B8121B36CA6008B4699 /* LogoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ABB2B8021B36CA6008B4699 /* LogoWhite.png */; };
 		9A34F6DF9B32B77923B2F605 /* Pods_Under9UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19317AE8869EC8859AB44604 /* Pods_Under9UITests.framework */; };
 		DAE7393CB54A378535805540 /* Pods_Under9.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096E9AB5690BE0A06BDA5BDC /* Pods_Under9.framework */; };
 		F750D57BA7358AF88F1788F7 /* Pods_Under9Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2EB32C96E2746994DB82151 /* Pods_Under9Tests.framework */; };
@@ -49,7 +47,6 @@
 		4A56BE3E21B301D400DA99BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A56BE4021B3245B00DA99BE /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		4A81791221B3DD71003C05CC /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		4A9A22AA21B38E1B00288686 /* durfeesinventory.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = durfeesinventory.csv; path = ../../../Downloads/durfeesinventory.csv; sourceTree = "<group>"; };
 		4AB13EA721B2DD000037E37C /* Under9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Under9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB13EAA21B2DD000037E37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AB13EAC21B2DD000037E37C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +60,6 @@
 		4AB13EC621B2DD010037E37C /* Under9UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Under9UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB13ECA21B2DD010037E37C /* Under9UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Under9UITests.swift; sourceTree = "<group>"; };
 		4AB13ECC21B2DD010037E37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4ABB2B8021B36CA6008B4699 /* LogoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoWhite.png; path = ../../../Downloads/LogoWhite.png; sourceTree = "<group>"; };
 		577CB827D0BE911BCCF17885 /* Pods-Under9Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Under9Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Under9Tests/Pods-Under9Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D83FFCFBE50DE611086B164 /* Pods-Under9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Under9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Under9/Pods-Under9.debug.xcconfig"; sourceTree = "<group>"; };
 		836337524064251F1E1CB24D /* Pods-Under9UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Under9UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Under9UITests/Pods-Under9UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,7 +133,6 @@
 		4AB13EA921B2DD000037E37C /* Under9 */ = {
 			isa = PBXGroup;
 			children = (
-				4A9A22AA21B38E1B00288686 /* durfeesinventory.csv */,
 				4AB13EAA21B2DD000037E37C /* AppDelegate.swift */,
 				4AB13EAC21B2DD000037E37C /* ViewController.swift */,
 				4A56BE3E21B301D400DA99BE /* HomeViewController.swift */,
@@ -145,7 +140,6 @@
 				4A81791221B3DD71003C05CC /* CartViewController.swift */,
 				4AB13EAE21B2DD000037E37C /* Main.storyboard */,
 				4AB13EB121B2DD010037E37C /* Assets.xcassets */,
-				4ABB2B8021B36CA6008B4699 /* LogoWhite.png */,
 				4AB13EB321B2DD010037E37C /* LaunchScreen.storyboard */,
 				4AB13EB621B2DD010037E37C /* Info.plist */,
 			);
@@ -289,9 +283,7 @@
 			files = (
 				4AB13EB521B2DD010037E37C /* LaunchScreen.storyboard in Resources */,
 				4AB13EB221B2DD010037E37C /* Assets.xcassets in Resources */,
-				4ABB2B8121B36CA6008B4699 /* LogoWhite.png in Resources */,
 				4AB13EB021B2DD000037E37C /* Main.storyboard in Resources */,
-				4A9A22AB21B38E1B00288686 /* durfeesinventory.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
