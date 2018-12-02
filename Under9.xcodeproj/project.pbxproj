@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A56BE3F21B301D400DA99BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56BE3E21B301D400DA99BE /* HomeViewController.swift */; };
 		4A56BE4121B3245B00DA99BE /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A56BE4021B3245B00DA99BE /* RestaurantViewController.swift */; };
-		4A81790B21B391F0003C05CC /* InventoryClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81790A21B391F0003C05CC /* InventoryClass.swift */; };
+		4A81791321B3DD71003C05CC /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A81791221B3DD71003C05CC /* CartViewController.swift */; };
 		4A9A22AB21B38E1B00288686 /* durfeesinventory.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4A9A22AA21B38E1B00288686 /* durfeesinventory.csv */; };
 		4AB13EAB21B2DD000037E37C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB13EAA21B2DD000037E37C /* AppDelegate.swift */; };
 		4AB13EAD21B2DD000037E37C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB13EAC21B2DD000037E37C /* ViewController.swift */; };
@@ -48,7 +48,7 @@
 		3B02664CAC4B464EFFDB352D /* Pods-Under9.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Under9.release.xcconfig"; path = "Pods/Target Support Files/Pods-Under9/Pods-Under9.release.xcconfig"; sourceTree = "<group>"; };
 		4A56BE3E21B301D400DA99BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A56BE4021B3245B00DA99BE /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
-		4A81790A21B391F0003C05CC /* InventoryClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryClass.swift; sourceTree = "<group>"; };
+		4A81791221B3DD71003C05CC /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		4A9A22AA21B38E1B00288686 /* durfeesinventory.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = durfeesinventory.csv; path = ../../../Downloads/durfeesinventory.csv; sourceTree = "<group>"; };
 		4AB13EA721B2DD000037E37C /* Under9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Under9.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB13EAA21B2DD000037E37C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 				4AB13EAC21B2DD000037E37C /* ViewController.swift */,
 				4A56BE3E21B301D400DA99BE /* HomeViewController.swift */,
 				4A56BE4021B3245B00DA99BE /* RestaurantViewController.swift */,
-				4A81790A21B391F0003C05CC /* InventoryClass.swift */,
+				4A81791221B3DD71003C05CC /* CartViewController.swift */,
 				4AB13EAE21B2DD000037E37C /* Main.storyboard */,
 				4AB13EB121B2DD010037E37C /* Assets.xcassets */,
 				4ABB2B8021B36CA6008B4699 /* LogoWhite.png */,
@@ -191,7 +191,6 @@
 				4AB13EA321B2DD000037E37C /* Sources */,
 				4AB13EA421B2DD000037E37C /* Frameworks */,
 				4AB13EA521B2DD000037E37C /* Resources */,
-				C9C6240BC608C327A1215468 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,30 +356,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C9C6240BC608C327A1215468 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Under9/Pods-Under9-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CSVImporter/CSVImporter.framework",
-				"${BUILT_PRODUCTS_DIR}/HandySwift/HandySwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSVImporter.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandySwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Under9/Pods-Under9-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CE9C0ADC6DCA6B5802D02235 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,8 +386,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AB13EAD21B2DD000037E37C /* ViewController.swift in Sources */,
-				4A81790B21B391F0003C05CC /* InventoryClass.swift in Sources */,
 				4A56BE4121B3245B00DA99BE /* RestaurantViewController.swift in Sources */,
+				4A81791321B3DD71003C05CC /* CartViewController.swift in Sources */,
 				4AB13EAB21B2DD000037E37C /* AppDelegate.swift in Sources */,
 				4A56BE3F21B301D400DA99BE /* HomeViewController.swift in Sources */,
 			);

@@ -100,8 +100,7 @@ class HomeViewController: UITableViewController, UISearchResultsUpdating {
         searchController.dismiss(animated: false, completion: nil)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
         selectedRestaurant = self.filteredRestaurantList![indexPath.row]
     }
     

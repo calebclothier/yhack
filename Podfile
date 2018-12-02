@@ -6,7 +6,6 @@ target 'Under9' do
   use_frameworks!
 
   # Pods for Under9
-  pod 'CSVImporter', '1.9.1'
 
   target 'Under9Tests' do
     inherit! :search_paths
