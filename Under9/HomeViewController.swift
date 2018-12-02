@@ -8,10 +8,26 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class HomeViewController: UITableViewController, UISearchResultsUpdating {
+    var unfilteredRestaurantList: [String]?
+    var filteredRestaurantList: [String]?
+    var selectedRestaurant: String?
+    let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
+        // Replace with API call for list of restaurant names
+        unfilteredRestaurantList = ["Durfee's", "KBT Cafe", "Bass Cafe", "Walmart", "Chapel Mini Mart", "Good Nature Market", "Elm City Market", "Costco", "Peoples Choice Deli", "Stop & Shop"]
+        filteredRestaurantList = unfilteredRestaurantList
+        
         super.viewDidLoad()
+        
+        searchController.searchResultsUpdater = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Stores"
+        tableView.tableHeaderView = searchController.searchBar
+
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,67 +40,78 @@ class HomeViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        if isFiltering() {
+            return filteredRestaurantList!.count
+        }
+        return unfilteredRestaurantList!.count
     }
 
-    /*
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
 
         // Configure the cell...
-
+        let restaurant: String
+        if isFiltering() {
+            restaurant = filteredRestaurantList![indexPath.row]
+        } else {
+            restaurant = unfilteredRestaurantList![indexPath.row]
+        }
+        
+        cell.textLabel!.text = restaurant
+        let distance = Float.random(in: 0.1 ... 4)
+        cell.detailTextLabel!.text = String(format: "%.01f", distance) + " mi"
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filteredRestaurantList = unfilteredRestaurantList?.filter({restaurant in
+            return restaurant.lowercased().contains(searchText.lowercased())
+        })
+        
+        tableView.reloadData()
     }
-    */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        searchController.dismiss(animated: false, completion: nil)
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        selectedRestaurant = self.filteredRestaurantList![indexPath.row]
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let i = self.tableView.indexPathForSelectedRow?.item,
+            let selectedRestaurant = self.filteredRestaurantList?[i] else { return }
+        
+        if let destinationViewController = segue.destination as? RestaurantViewController {
+            destinationViewController.restaurantName = selectedRestaurant
+        }
     }
-    */
 
 }
